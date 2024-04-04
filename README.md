@@ -2,7 +2,7 @@
 
 ## Roadmap
 <ul style="list-style-type:circle;">
-  <li>Data subset collected from kaggle: https://www.kaggle.com/datasets/shivamb/disney-movies-and-tv-shows/data .</li>
+  <li>Data subset collected from kaggle: https://www.kaggle.com/datasets/shivamb/disney-movies-and-tv-shows/data</li>
   <li>Loading Data in PowerBi Dekstop</li>
   <li>Data Transformation & Cleaning</li>
   <li>Visualization Using Tools</li>
@@ -11,7 +11,7 @@
   </ul>
 
 ## New Variables Added
-The dataset has following new columns:
+The dataset has the following new columns:
 <ul style="list-style-type:circle;">
   <li>Count of directors</li>
   <li>Count of countries</li>
@@ -20,6 +20,17 @@ The dataset has following new columns:
   <li>Difference between date_added and release_year for which different Time of Show are formed</li>  
   <li>Category of duration</li>
   <li>Count of genres</li>
+  </ul>
+
+## Formulae used
+The formulae used during data cleaning are:
+<ul style="list-style-type:circle;">
+  <li>First Text to Columns and then COUNTA function used to obtain count of directors</li>
+  <li>First Text to Columns and then COUNTA function used to obtain count of countries</li>
+  <li>Used IFS function where less than or equal to 2, low presence; less than or equal to 5, medium presence; TRUE, high presence</li> 
+  <li>First Text to Columns and then used IFS function where less than or equal to 3, recent; less than or equal to 8, little old; less than or equal to 15, old; TRUE, very old</li>
+  <li>First Text to Columns and then used IFS function where less than or equal to 30, very short; less than or equal to 60, short; less than or equal to 90, medium; less than or equal to 120, long; TRUE, very long</li>
+  <li>First Text to Columns and then COUNTA function used to obtain count of genres</li>
   </ul>
 
 ## Disney+ Analysis Dashboard
